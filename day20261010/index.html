@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <th colspan="2">学生信息</th>
+        <!-- 横跨两列 -->
+      </tr>
+      <tr>
+        <th>姓名</th>
+        <th>年龄</th>
+      </tr>
+    </table>
+    <hr color="red" />
+    <table border="1">
+      <tr>
+        <th>姓名</th>
+        <td>张三</td>
+        <td rowspan="2">同一人</td>
+        <!-- 这个单元格会跨 2 行 -->
+      </tr>
+      <tr>
+        <th>年龄</th>
+        <td>25</td>
+        <!-- 这里不需要再写第三个单元格，因为已被上一行的 rowspan 合并 -->
+      </tr>
+    </table>
+  </body>
+</html>
