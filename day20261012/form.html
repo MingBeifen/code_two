@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://www.baidu.com" method="get">
+        placeholder：<input placeholder="请输入您的银行卡密码" type="text" />  <br/>
+        用户名：<input readonly value="baby" type="text" name="username" maxlength="5"/>  <br/>
+        密码：<input disabled value="666" type="password" name="password"/> <br/>
+        性别：
+            <label><input type="radio" name="sex" value="male"/>男</label>
+            <label><input checked type="radio" name="sex" value="female"/>女</label>   <br/>
+
+        爱好：<input type="checkbox" name="hobby" value="football"/>足球
+            <input checked type="checkbox" name="hobby" value="basketball"/>篮球
+            <input checked type="checkbox" name="hobby" value="swimming"/>游泳   <br/> 
+        头像：<input type="file" name="avatar"/>  <br/>
+        隐藏域：<input type="hidden" name="money" value="500"/> <br/>
+        选择您喜欢的水果：
+        <select name="fruit" size="2" multiple>
+            <option value="apple">苹果</option>
+            <option value="banana">香蕉</option>
+            <!--榴莲设置为选中状态-->
+            <option selected value="durian">榴莲</option>
+        </select>
+        <br/>
+        多行文本：<textarea name="text" cols="50" rows="10"></textarea> <br/>
+        <input type="submit" value="提交"/>
+        <input type="reset" value="重置"/>
+        <input type="button" value="一般按钮"/>
+    
+    </form>
+</body>
+</html>
