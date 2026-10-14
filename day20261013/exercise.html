@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <h2 align="center">用户注册表</h2>
+      <table width="500" align="center" border="1">
+        <tr>
+          <td align="center" width="100">用户名：</td>
+          <td><input type="text" name="username" /></td>
+        </tr>
+        <tr>
+          <td align="center" width="100">密码：</td>
+          <td><input type="password" name="password" /></td>
+        </tr>
+        <tr>
+          <td align="center" width="100">确认密码：</td>
+          <td><input type="password" name="confirmPassword" /></td>
+        </tr>
+        <tr>
+          <td align="center" width="100">电子邮箱：</td>
+          <td><input type="text" name="email" /></td>
+        </tr>
+        <tr>
+          <td align="center" width="100">手机号码：</td>
+          <td><input type="text" name="phone" /></td>
+        </tr>
+        <tr>
+          <td align="center" width="100">性别：</td>
+          <td>
+            <label><input checked type="radio" name="sex" value="male" /> 男</label>
+            <label><input type="radio" name="sex" value="female" /> 女</label>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" width="100">是否有房：</td>
+          <td>
+            <label><input checked type="radio" name="house" value="yes" /> 有</label>
+            <label><input type="radio" name="house" value="no" /> 没有</label>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" width="100">爱好：</td>
+          <td>
+            <label><input type="checkbox" name="hobby" value="fbb" /> 范冰冰</label>
+            <label><input checked type="checkbox" name="hobby" value="lyf" /> 刘亦菲</label>
+            <label><input type="checkbox" name="hobby" value="tly" /> 佟丽娅</label>
+            <label><input type="checkbox" name="hobby" value="yy" /> 杨颖</label>
+            <label><input type="checkbox" name="hobby" value="ly" /> 柳岩</label>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" width="100">户籍：</td>
+          <td>
+            <select name="city"> 
+                <option value="beijing">北京</option>
+                <option selected value="shanghai">上海</option>
+                <option value="guangzhou">广州</option>
+                <option value="shenzhen">深圳</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" width="100">课程：</td>
+          <td>
+            <select name="course"> 
+                <option value="JavaEE">JavaEE</option>
+                <option value="WEB前端">WEB前端</option>
+                <option value="数据结构">数据结构</option>
+                <option value="C++">C++</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" width="100">头像：</td>
+          <td>
+            <input type="file" name="avatar" />
+          </td>
+        </tr>
+        <tr>
+          <td align="center" width="100">个人介绍：</td>
+          <td>
+            <textarea name="introduction" rows="5" cols="50"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" width="100">验证码：</td>
+          <td>
+            <input type="text" name="captcha" />8888
+          </td>
+        </tr>
+        <tr>
+          <td align="center" width="100" colspan="2">
+            <input type="checkbox" name="agree" /> 是否阅读并同意协议
+          </td>
+        </tr>
+        <tr>
+          <td align="center" width="100" colspan="2">
+            <input type="submit" value="提交" />
+            <input type="reset" value="重置" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
