@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>溢出样式</title>
+    <style>
+      #tag > div {
+        width: 200px;
+        height: 100px;
+        border: 2px solid #333;
+        margin: 10px;
+        padding: 5px;
+      }
+      .visible {
+        overflow: visible;
+      }
+      .hidden {
+        overflow: hidden;
+      }
+      .scroll {
+        overflow: scroll;
+      }
+      .auto {
+        overflow: auto;
+      }
+      .title {
+        width: 5em; /* 设置容器宽度为5个字符宽度 */
+        height: 1.4em; /* 设置容器高度为1.4行高 */
+        white-space: nowrap; /* 禁止文本换行 */
+        overflow: hidden; /* 隐藏超出容器的内容 */
+        text-overflow: ellipsis; /* 超出部分显示省略号... */
+        border: 1px solid #ccc; /* 添加边框便于观察 */
+        padding: 5px; /* 内边距 */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="tag">
+      <div class="visible">
+        这个div使用overflow:
+        visible，内容超出部分会显示在框外。这里有很多文字会超出容器。这个div使用overflow:
+        visible，内容超出部分会显示在框外。这里有很多文字会超出容器。
+      </div>
+      <div class="hidden">
+        这个div使用overflow:
+        hidden，超出内容会被隐藏。这里有很多文字会超出容器。这个div使用overflow:
+        hidden，超出内容会被隐藏。这里有很多文字会超出容器。
+      </div>
+      <div class="scroll">
+        这个div使用overflow:
+        scroll，始终显示滚动条。这里有很多文字会超出容器。这个div使用overflow:
+        scroll，始终显示滚动条。这里有很多文字会超出容器。
+      </div>
+      <div class="auto">
+        这个div使用overflow:
+        auto，只在需要时显示滚动条。这里有很多文字会超出容器。这个div使用overflow:
+        auto，只在需要时显示滚动条。这里有很多文字会超出容器。
+      </div>
+    </div>
+
+    <hr />
+    <div class="title">这是一段很长的文本内容会被截断显示省略号</div>
+  </body>
+</html>

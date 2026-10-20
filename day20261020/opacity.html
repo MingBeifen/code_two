@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>透明度样式</title>
+    <style>
+        p{
+            background-color: blue;
+            color: white;
+            /* 透明度 （完全透明）0-1（不透明） */
+            opacity: 0.5;
+        }
+        #dv{
+            width: 300px;
+            height: 300px;
+            border: 1px solid green;
+        }
+        #dv:hover h2{
+            opacity: 0;
+            /* color: red;
+            font-size: 30px; */
+        }
+    </style>
+</head>
+<body>
+    <p>《基督山伯爵》</p>
+    <hr/>
+    <div id="dv">
+        <h2>《水浒传》</h2>
+    </div>
+</body>
+</html>

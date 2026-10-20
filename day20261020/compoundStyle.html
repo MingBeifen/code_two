@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>复合样式</title>
+    <style>
+      /* 复合样式示例：同时设置多个边框属性 */
+      .box {
+        width: 200px;
+        height: 100px;
+        /* 复合边框样式：宽度 样式 颜色 */
+        border: 2px solid red;
+        /* 复合字体样式：样式 粗细 大小/行高 字体族 */
+        font:
+          italic bold 16px/1.5 Arial,
+          sans-serif;
+        /* 复合外边距：上 右 下 左 */
+        margin: 10px 20px 10px 20px;
+        /* 复合内边距 */
+        padding: 15px 25px;
+        text-align: center; /* 设置行内文字在元素内水平居中【注意：是作用于文字的】 */
+
+        display: flex; /* 将元素设为弹性容器（叫做flex布局），使其子元素默认沿主轴（水平方向）排列 */
+        justify-content: center; /* 在主轴（水平方向）上让子元素居中【该属性需要在display:flex;前提下才能生效，也就是它专门为flex布局准备的，作用于flex容器内的flex子项（子div、子块级元素）】 */
+        align-items: center; /* 在交叉轴（垂直方向）上让子元素居中 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">这是一个使用复合样式的盒子</div>
+  </body>
+</html>

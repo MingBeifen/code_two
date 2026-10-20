@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本对齐</title>
+<style>
+      p {
+        width: 300px;
+        border: 1px solid #000;
+        margin: 10px;
+        padding: 10px;
+      }
+      .left {
+        text-align: left;
+      }
+      .center {
+        text-align: center;
+      }
+      .right {
+        text-align: right;
+      }
+      .justify {
+        text-align: justify;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="left">这段文本左对齐</p>
+    <p class="center">这段文本居中对齐</p>
+    <p class="right">这段文本右对齐</p>
+    <p class="justify">
+      这是一个中英文混合的测试段落 This is a mixed Chinese-English test
+      paragraph 两端对齐会让每行的左右边缘都整齐贴合容器边界 You can see that
+      the right edge becomes perfectly straight 英文单词之间的空格会被拉伸或压缩
+      中文汉字之间通常不会拉伸 但标点符号和英文单词的空隙会调整
+      看看这一行右侧是否比左对齐更整齐 Compare this with normal left alignment
+      and you will notice the difference clearly
+    </p>
+  </body>
+</html>
