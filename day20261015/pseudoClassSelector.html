@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>伪类选择器</title>
+    <style>
+      .testActive:active {
+        font-weight: bold;
+        color: red;
+      }
+      .testHover:hover {
+        font-style: italic;
+        color: green;
+      }
+      div > span:first-child {
+        font-weight: bold;
+        color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="testActive">鼠标按下时字体加粗，颜色变为红色</div>
+    <div class="testHover">鼠标悬停时字体变为斜体字，颜色变为绿色</div>
+    <div>
+      <span>用户信息</span>
+      <span>商品信息</span>
+    </div>
+  </body>
+</html>
