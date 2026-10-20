@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>复合选择器的优先级</title>
+    <style>
+      div.container {
+        color: blue;
+      }
+      .container.box {
+        color: green;
+      }
+      /* #main  id选择器   空格  后代选择器   p 标签选择器  .highlight 类选择器 
+      p.highlight  */
+      #main p.highlight {
+        color: red;
+      }
+      .highlight {
+        color: orange;
+      }
+      p {
+        color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main" class="container box">
+      <p class="text highlight">这段文字显示为红色</p>
+    </div>
+  </body>
+</html>
