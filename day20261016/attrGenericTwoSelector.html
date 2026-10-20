@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>匹配结尾</title>
+    <style>
+      a[href$=".pdf"] {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="document.pdf">PDF文档 (红色)</a><br />
+    <a href="https://example.com/file.pdf">在线PDF (红色)</a><br />
+    <a href="image.jpg">图片文件 (默认颜色)</a><br />
+    <a href="report.doc">Word文档 (默认颜色)</a>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>属性选择器中的通配符</title>
+    <style>
+      /* 交集选择器  标签选择器 属性选择器*/
+      a[href^="https"] {
+        color: green;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://www.baidu.com">百度 (https - 绿色)</a><br />
+    <a href="http://www.example.com">Example (http - 默认颜色)</a><br />
+    <a href="https://github.com">GitHub (https - 绿色)</a><br />
+    <a href="/local-page.html">本地页面 (默认颜色)</a>
+  </body>
+</html>

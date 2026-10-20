@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>匹配完整单词</title>
+    <style>
+      /* 匹配 class="highlight" 或 class="text highlight" */
+      p[class~="highlight"] {
+        background: yellow;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="highlight">class="highlight" (黄色背景)</p>
+    <p class="text highlight">class="text highlight" (黄色背景)</p>
+    <p class="highlight important">class="highlight important" (黄色背景)</p>
+    <p class="text-highlight">class="text-highlight" (无背景)</p>
+    <p class="highlighted">class="highlighted" (无背景)</p>
+    <p class="normal">class="normal" (无背景)</p>
+  </body>
+</html>

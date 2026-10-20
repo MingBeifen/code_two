@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>伪类选择器中的通配符</title>
+    <style>
+      /* 匹配所有奇数位置的元素   even 偶数 */
+      /* li:nth-child(odd) {
+        background: #f0f0f0;
+        padding: 5px;
+      } */
+      /* 匹配所有奇数位置的 li   of-type */
+      li:nth-of-type(odd) {
+        background: #f0f0f0;
+        padding: 5px;
+      }
+
+      table {
+        width: 100%;
+        /* 合并表格边框 */
+        border-collapse: collapse;
+      }
+      td {
+        padding: 8px;
+        border: 1px solid #ddd;
+      }
+      /* 所有偶数tr行有背景色 */
+      tr:nth-child(even) {
+        background: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>第1项 - 奇数 (灰色背景)</li>
+      <a href="#">射雕英雄传</a>
+      <li>第2项 - 偶数 (无背景)</li>
+      <li>第3项 - 奇数 (灰色背景)</li>
+      <li>第4项 - 偶数 (无背景)</li>
+      <li>第5项 - 奇数 (灰色背景)</li>
+      <li>第6项 - 偶数 (无背景)</li>
+    </ul>
+    <hr />
+    <table>
+      <tr>
+        <td>第1行 - 奇数 (无背景)</td>
+      </tr>
+      <tr>
+        <td>第2行 - 偶数 (灰色背景)</td>
+      </tr>
+      <tr>
+        <td>第3行 - 奇数 (无背景)</td>
+      </tr>
+      <tr>
+        <td>第4行 - 偶数 (灰色背景)</td>
+      </tr>
+      <tr>
+        <td>第5行 - 奇数 (无背景)</td>
+      </tr>
+      <tr>
+        <td>第6行 - 偶数 (灰色背景)</td>
+      </tr>
+    </table>
+  </body>
+</html>

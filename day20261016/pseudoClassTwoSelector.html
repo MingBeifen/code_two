@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>反选</title>
+    <style>
+      /*  */
+      #tag div {
+        padding: 10px;
+        margin: 5px;
+        border: 1px solid #ccc;
+      }
+      /* 匹配所有不包含 class="hidden" 的 div */
+      #tag div:not(.hidden) {
+        background: lightgreen;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="tag">
+      <div class="visible">class="visible" (绿色背景)</div>
+      <div class="hidden">class="hidden" (无背景)</div>
+      <div class="content">class="content" (绿色背景)</div>
+      <div>没有class的div (绿色背景)</div>
+      <div class="hidden important">class="hidden important" (无背景)</div>
+    </div>
+  </body>
+</html>

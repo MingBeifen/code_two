@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>匹配前缀或独立值</title>
+    <style>
+      /* 匹配 lang="en" 或 lang="en-US" */
+      div[lang|="en"] {
+        font-family: Arial;
+        background: lightblue;
+        padding: 10px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div lang="en">lang="en" (匹配)</div>
+    <div lang="en-US">lang="en-US" (匹配)</div>
+    <div lang="en-GB">lang="en-GB" (匹配)</div>
+    <div lang="en_UK">lang="en_UK" (无效果)</div>
+    <div lang="english">lang="english" (无效果)</div>
+    <div lang="fr">lang="fr" (无效果)</div>
+    <div lang="es-MX">lang="es-MX" (无效果)</div>
+  </body>
+</html>

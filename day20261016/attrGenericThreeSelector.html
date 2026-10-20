@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>匹配包含</title>
+    <style>
+      div[class*="box"] {
+        border: 2px solid blue;
+        padding: 10px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">class="box" (有边框)</div>
+    <div class="content-box">class="content-box" (有边框)</div>
+    <div class="box-container">class="box-container" (有边框)</div>
+    <div class="container">class="container" (无边框)</div>
+    <div class="sidebar">class="sidebar" (无边框)</div>
+  </body>
+</html>
