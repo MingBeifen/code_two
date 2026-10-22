@@ -14,7 +14,8 @@
       }
       #dv {
         width: 1000px;
-        height: 830px;
+        /* 用 min-height 代替 height: 内容多了(比如加了提交按钮)也能自动撑高, 不会溢出 */
+        min-height: 830px;
         /* border: 1px solid red; */
         /* auto 自适应 使div处于body的水平中间位置 */
         margin: 0 auto;
@@ -66,15 +67,15 @@
         padding-left: 10px;
       }
       .dvOne {
-        /* 弹性布局 */
-        display: flex;
-        /* 弹性布局在主轴方向(默认的主轴就是X轴)排列方式 两端对齐 */
-        justify-content: space-between;
+        /* 网格布局: 4个div自动排成 2行2列, 不再需要<br>换行 */
+        display: grid;
+        /* 两列, 每列等宽 */
+        grid-template-columns: 1fr 1fr;
         width: 100%;
-        height: 84px;
+        /* 高度由内容撑开, 不要写死 */
         /* border: 1px solid rgb(102, 126, 234); */
         margin-top: 30px;
-        /* 设置包含的两个div之间的间隔 */
+        /* 行与行、列与列之间的间隔 */
         gap: 20px;
       }
       label {
@@ -84,25 +85,121 @@
         font-weight: bold;
       }
       .dvOne > div {
-        flex: 1;
-        /* border:2px solid red; */
-        height: 84px;
+        /* 网格项不需要flex:1, 由 grid-template-columns 决定宽度 */
+        /* 用 min-height: 普通输入框保持 84px 的整齐行高, 备注栏内容高时能自动撑开 */
+        min-height: 84px;
       }
       input[type="text"],
-      select {
+      select,
+      textarea {
         width: 100%;
         height: 50px;
         padding: 10px;
         font-size: 18px;
         border: 1px solid #ccc;
-        transition: box-shadow 0.2s;
+        /* 让边框和阴影的变化有过渡动画, 鼠标进出更顺滑 */
+        transition:
+          box-shadow 0.2s,
+          border-color 0.2s;
         border-radius: 5px;
       }
-      input:focus,
-      select:focus {
+      /* 多行文本域: 覆盖上面统一的 50px 高度, 改成由 rows 决定 */
+      textarea {
+        height: auto;
+        min-height: 90px;
+        line-height: 1.5;
+        /* 表单元素默认不继承页面字体, 这里手动继承 */
+        font-family: inherit;
+        /* 只允许垂直方向拖动, 防止把布局拉歪 */
+        resize: vertical;
+      }
+      /* 鼠标移入时出现阴影(悬停态) */
+      input[type="text"]:hover,
+      select:hover,
+      textarea:hover {
+        border-color: rgb(102, 126, 234);
+        box-shadow: 0 0 8px rgba(102, 126, 234, 0.5);
+      }
+      /* 聚焦时(点进去输入)阴影更强, 用来区分悬停与激活 */
+      input[type="text"]:focus,
+      select:focus,
+      textarea:focus {
         outline: none;
         border: 1px solid rgb(102, 126, 234);
         box-shadow: 0 0 0 5px rgb(224, 229, 251);
+      }
+      /* 性别这一栏独占一整行(跨越两列) */
+      .dvFull {
+        grid-column: 1 / -1;
+      }
+      /* 单选框的横向排列容器 */
+      .radioGroup {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        height: 50px;
+      }
+      /* 单选框后面的文字(覆盖 label 的块级与加粗) */
+      .radioGroup label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 18px;
+        font-weight: normal;
+        cursor: pointer;
+      }
+      .radioGroup input[type="radio"] {
+        width: 18px;
+        height: 18px;
+        /* 单选框的选中颜色 */
+        accent-color: rgb(102, 126, 234);
+        cursor: pointer;
+      }
+      /* 备注栏: 独占整行 */
+      .dvRemark {
+        grid-column: 1 / -1;
+      }
+      /* 两列三行的输入框组: 独占整行, 内部自己再分成两列 */
+      .dvMore {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      .dvMore > div {
+        min-height: 84px;
+      }
+      /* 提交按钮独占一整行, 水平居中 */
+      .dvSubmit {
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+      }
+      .btnSubmit {
+        width: 200px;
+        height: 50px;
+        font-size: 18px;
+        letter-spacing: 2px;
+        color: #fff;
+        background-color: rgb(102, 126, 234);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition:
+          background-color 0.2s,
+          box-shadow 0.2s,
+          transform 0.1s;
+      }
+      /* 鼠标移入: 颜色加深 + 浮起阴影 */
+      .btnSubmit:hover {
+        background-color: rgb(85, 108, 214);
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.6);
+      }
+      /* 按下时轻微下沉 */
+      .btnSubmit:active {
+        transform: translateY(2px);
+        box-shadow: 0 2px 6px rgba(102, 126, 234, 0.5);
       }
     </style>
   </head>
@@ -152,6 +249,34 @@
               <option value="3">大三</option>
               <option value="4">大四</option>
             </select>
+          </div>
+          <div>
+            <label for="">邮箱</label>
+            <input type="text" placeholder="请输入邮箱" />
+          </div>
+          <div>
+            <label for="">联系电话</label>
+            <input type="text" placeholder="请输入电话号码" />
+          </div>
+          <div class="dvFull">
+            <label for="">性别</label>
+            <div class="radioGroup">
+              <!-- name 相同 => 同一组, 只能选中一个; checked => 默认选中 -->
+              <label
+                ><input type="radio" name="gender" value="男" checked />
+                男</label
+              >
+              <label><input type="radio" name="gender" value="女" /> 女</label>
+            </div>
+          </div>
+          <div class="dvRemark">
+            <label for="">备注</label>
+            <textarea rows="3" placeholder="请输入备注信息"></textarea>
+          </div>
+          <!-- 两列三行的输入框: 内部 grid 两列, 6 个 div 自然排成 3 行 -->
+          <div class="dvSubmit">
+            <!-- type="submit" 才会触发表单提交 -->
+            <button type="submit" class="btnSubmit">确认提交</button>
           </div>
         </div>
       </form>
