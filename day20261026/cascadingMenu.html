@@ -1,79 +1,453 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>级联菜单</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            /* 去除列表默认样式 */
-            list-style-type: none;
-        }
-        .ul_one{
-            /* 居中 */
-            margin: 0 auto;
-            width:120px;
-            background-color: rgb(11, 66, 103);
-        }
-        .ul_one > li{
-            width:120px;
-            height:35px;
-            padding:5px;
-            color:white;
-            /* 下边框 */
-            border-bottom: 1px solid white;
-            text-align: center;
-            /* line-height: 25px; */
-            position: relative;
-        }
-        .ul_one > li:hover{
-            color: rgb(255,205,160);
-            text-decoration: underline;
-        }
-        .ul_one > li:hover > ul{
-            display: block;
-        }
-        .ul_two{
-            position: absolute;
-            left:120px;
-            top:0;
-            width:120px;
-            background-color: rgb(200, 112, 86);
-            /* 隐藏 */
-            display: none;
-        }
-        .ul_two > li{
-            width:120px;
-            height:35px;
-            padding:5px;
-            color:white;
-            /* 下边框 */
-            border-bottom: 1px solid white;
-            text-align: center;
-            /* line-height: 25px; */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* 去除列表默认样式 */
+        list-style-type: none;
+      }
+      .ul_one {
+        /* 居中 */
+        margin: 0 auto;
+        width: 120px;
+        background-color: rgb(11, 66, 103);
+      }
+      .ul_one > li {
+        width: 120px;
+        height: 35px;
+        padding: 5px;
+        color: white;
+        /* 下边框 */
+        border-bottom: 1px solid white;
+        text-align: center;
+        /* line-height: 25px; */
+        position: relative;
+      }
+      .ul_one > li:hover {
+        color: rgb(255, 205, 160);
+        text-decoration: underline;
+      }
+      .ul_one > li:hover > ul {
+        display: block;
+      }
+      .ul_two {
+        position: absolute;
+        left: 120px;
+        top: 0;
+        width: 120px;
+        background-color: rgb(200, 112, 86);
+        /* 隐藏 */
+        display: none;
+      }
+      .ul_two > li {
+        width: 120px;
+        height: 35px;
+        padding: 5px;
+        color: white;
+        /* 下边框 */
+        border-bottom: 1px solid white;
+        text-align: center;
+        /* line-height: 25px; */
+      }
+      .ul_two > li:hover {
+        color: rgb(255, 205, 160);
+        text-decoration: underline;
+      }
+      .ul_three {
+        position: absolute;
+        left: 120px;
+        top: 0;
+        width: 120px;
+        background-color: rgb(200, 112, 86);
+        /* 隐藏 */
+        display: none;
+      }
+      .ul_three > li {
+        width: 120px;
+        height: 35px;
+        padding: 5px;
+        color: white;
+        /* 下边框 */
+        border-bottom: 1px solid white;
+        text-align: center;
+      }
+      .ul_three > li:hover {
+        color: rgb(255, 205, 160);
+        text-decoration: underline;
+      }
+      .ul_four {
+        position: absolute;
+        left: 120px;
+        top: 0;
+        width: 120px;
+        background-color: rgb(200, 112, 86);
+        /* 隐藏 */
+        display: none;
+      }
+      .ul_four > li {
+        width: 120px;
+        height: 35px;
+        padding: 5px;
+        color: white;
+        /* 下边框 */
+        border-bottom: 1px solid white;
+        text-align: center;
+      }
 
-        }
-        .ul_two > li:hover{
-            color: rgb(255,205,160);
-            text-decoration: underline;
-        }
+      .ul_four > li:hover {
+        color: rgb(255, 205, 160);
+        text-decoration: underline;
+      }
+      .ul_five {
+        position: absolute;
+        left: 120px;
+        top: 0;
+        width: 120px;
+        background-color: rgb(200, 112, 86);
+        /* 隐藏 */
+        display: none;
+      }
+      .ul_five > li {
+        width: 120px;
+        height: 35px;
+        padding: 5px;
+        color: white;
+        border-bottom: 1px solid white;
+        text-align: center;
+      }
+      .ul_five > li:hover {
+        color: rgb(255, 205, 160);
+        text-decoration: underline;
+      }
+      .ul_two > li:hover > .ul_five {
+        display: block;
+      }
+
+      .ul_six {
+        position: absolute;
+        left: 120px;
+        top: 0;
+        width: 120px;
+        background-color: rgb(200, 112, 86);
+        /* 隐藏 */
+        display: none;
+      }
+      .ul_six > li {
+        width: 120px;
+        height: 35px;
+        padding: 5px;
+        color: white;
+        border-bottom: 1px solid white;
+        text-align: center;
+      }
+      .ul_six > li:hover {
+        color: rgb(255, 205, 160);
+        text-decoration: underline;
+      }
+      .ul_two > li:hover > .ul_six {
+        display: block;
+      }
+      .ul_seven {
+        position: absolute;
+        left: 120px;
+        top: 0;
+        width: 120px;
+        background-color: rgb(200, 112, 86);
+        /* 隐藏 */
+        display: none;
+      }
+      .ul_seven > li {
+        width: 120px;
+        height: 35px;
+        padding: 5px;
+        color: white;
+        border-bottom: 1px solid white;
+        text-align: center;
+      }
+      .ul_seven > li:hover {
+        color: rgb(255, 205, 160);
+        text-decoration: underline;
+      }
+      .ul_two > li:hover > .ul_seven {
+        display: block;
+      }
+      .ul_eight {
+        position: absolute;
+        left: 120px;
+        top: 0;
+        width: 120px;
+        background-color: rgb(200, 112, 86);
+        /* 隐藏 */
+        display: none;
+      }
+      .ul_eight > li {
+        width: 120px;
+        height: 35px;
+        padding: 5px;
+        color: white;
+        border-bottom: 1px solid white;
+        text-align: center;
+      }
+      .ul_eight > li:hover {
+        color: rgb(255, 205, 160);
+        text-decoration: underline;
+      }
+      .ul_two > li:hover > .ul_eight {
+        display: block;
+      }
+      .ul_nine {
+        position: absolute;
+        left: 120px;
+        top: 0;
+        width: 120px;
+        background-color: rgb(200, 112, 86);
+        /* 隐藏 */
+        display: none;
+      }
+      .ul_nine > li {
+        width: 120px;
+        height: 35px;
+        padding: 5px;
+        color: white;
+        border-bottom: 1px solid white;
+        text-align: center;
+      }
+      .ul_nine > li:hover {
+        color: rgb(255, 205, 160);
+        text-decoration: underline;
+      }
+      .ul_three > li:hover > .ul_nine {
+        display: block;
+      }
+      .ul_ten {
+        position: absolute;
+        left: 120px;
+        top: 0;
+        width: 120px;
+        background-color: rgb(200, 112, 86);
+        /* 隐藏 */
+        display: none;
+      }
+      .ul_ten > li {
+        width: 120px;
+        height: 35px;
+        padding: 5px;
+        color: white;
+        border-bottom: 1px solid white;
+        text-align: center;
+      }
+      .ul_ten > li:hover {
+        color: rgb(255, 205, 160);
+        text-decoration: underline;
+      }
+      .ul_three > li:hover > .ul_ten {
+        display: block;
+      }
+      .ul_eleven {
+        position: absolute;
+        left: 120px;
+        top: 0;
+        width: 120px;
+        background-color: rgb(200, 112, 86);
+        /* 隐藏 */
+        display: none;
+      }
+      .ul_eleven > li {
+        width: 120px;
+        height: 35px;
+        padding: 5px;
+        color: white;
+        border-bottom: 1px solid white;
+        text-align: center;
+      }
+      .ul_eleven > li:hover {
+        color: rgb(255, 205, 160);
+        text-decoration: underline;
+      }
+      .ul_three > li:hover > .ul_eleven {
+        display: block;
+      }
+      .ul_twelve {
+        position: absolute;
+        left: 120px;
+        top: 0;
+        width: 120px;
+        background-color: rgb(200, 112, 86);
+        /* 隐藏 */
+        display: none;
+      }
+      .ul_twelve > li {
+        width: 120px;
+        height: 35px;
+        padding: 5px;
+        color: white;
+        border-bottom: 1px solid white;
+        text-align: center;
+      }
+      .ul_twelve > li:hover {
+        color: rgb(255, 205, 160);
+        text-decoration: underline;
+      }
+      .ul_four > li:hover > .ul_twelve {
+        display: block;
+      }
+      .ul_thirteen {
+        position: absolute;
+        left: 120px;
+        top: 0;
+        width: 120px;
+        background-color: rgb(200, 112, 86);
+        /* 隐藏 */
+        display: none;
+      }
+      .ul_thirteen > li {
+        width: 120px;
+        height: 35px;
+        padding: 5px;
+        color: white;
+        border-bottom: 1px solid white;
+        text-align: center;
+      }
+      .ul_thirteen > li:hover {
+        color: rgb(255, 205, 160);
+        text-decoration: underline;
+      }
+      .ul_four > li:hover > .ul_thirteen {
+        display: block;
+      }
+      .ul_fourteen {
+        position: absolute;
+        left: 120px;
+        top: 0;
+        width: 120px;
+        background-color: rgb(200, 112, 86);
+        /* 隐藏 */
+        display: none;
+      }
+      .ul_fourteen > li {
+        width: 120px;
+        height: 35px;
+        padding: 5px;
+        color: white;
+        border-bottom: 1px solid white;
+        text-align: center;
+      }
+      .ul_fourteen > li:hover {
+        color: rgb(255, 205, 160);
+        text-decoration: underline;
+      }
+      .ul_four > li:hover > .ul_fourteen {
+        display: block;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <ul class="ul_one">
-        <li>江西省
-            <ul class="ul_two">
-                <li>南昌市</li>
-                <li>景德镇市</li>
-                <li>萍乡市</li>
-                <li>九江市</li>
+      <li>
+        江西省
+        <ul class="ul_two">
+          <li>
+            南昌市
+            <ul class="ul_five">
+              <li>东湖区</li>
+              <li>西湖区</li>
+              <li>青云谱区</li>
+              <li>青山湖区</li>
             </ul>
-        </li>
-        <li>湖南省</li>
-        <li>广东省</li>
+          </li>
+          <li>
+            景德镇市
+            <ul class="ul_six">
+              <li>昌江区</li>
+              <li>珠山区</li>
+              <li>浮梁区</li>
+            </ul>
+          </li>
+          <li>
+            萍乡市
+            <ul class="ul_seven">
+              <li>安源区</li>
+              <li>湘东区</li>
+              <li>莲花县</li>
+            </ul>
+          </li>
+          <li>
+            九江市
+            <ul class="ul_eight">
+              <li>濂溪区</li>
+              <li>柴桑区</li>
+              <li>浔阳区</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        湖南省
+        <ul class="ul_three">
+          <li>
+            长沙市
+            <ul class="ul_nine">
+              <li>芙蓉区</li>
+              <li>天心区</li>
+              <li>岳麓区</li>
+            </ul>
+          </li>
+          <li>
+            株洲市
+            <ul class="ul_ten">
+              <li>荷塘区</li>
+              <li>芦淞区</li>
+              <li>石峰区</li>
+            </ul>
+          </li>
+          <li>
+            湘潭市
+            <ul class="ul_eleven">
+              <li>雨湖区</li>
+              <li>湘潭县</li>
+              <li>韶山市</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        广东省
+        <ul class="ul_four">
+          <li>
+            广州
+            <ul class="ul_twelve">
+              <li>越秀区</li>
+              <li>天河区</li>
+              <li>海珠区</li>
+              <li>荔湾区</li>
+            </ul>
+          </li>
+          <li>
+            深圳
+            <ul class="ul_thirteen">
+              <li>福田区</li>
+              <li>南山区</li>
+              <li>罗湖区</li>
+              <li>龙华区</li>
+            </ul>
+          </li>
+          <li>
+            东莞
+            <ul class="ul_fourteen">
+              <li>长安镇</li>
+              <li>虎门镇</li>
+              <li>厚街镇</li>
+              <li>东坑镇</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
     </ul>
-</body>
+  </body>
 </html>
