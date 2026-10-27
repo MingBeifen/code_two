@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>级联菜单</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* 去除列表默认样式 */
+            list-style-type: none;
+        }
+        .ul_one{
+            /* 居中 */
+            margin: 0 auto;
+            width:120px;
+            background-color: rgb(11, 66, 103);
+        }
+        .ul_one > li{
+            width:120px;
+            height:35px;
+            padding:5px;
+            color:white;
+            /* 下边框 */
+            border-bottom: 1px solid white;
+            text-align: center;
+            /* line-height: 25px; */
+            position: relative;
+        }
+        .ul_one > li:hover{
+            color: rgb(255,205,160);
+            text-decoration: underline;
+        }
+        .ul_one > li:hover > ul{
+            display: block;
+        }
+        .ul_two{
+            position: absolute;
+            left:120px;
+            top:0;
+            width:120px;
+            background-color: rgb(200, 112, 86);
+            /* 隐藏 */
+            display: none;
+        }
+        .ul_two > li{
+            width:120px;
+            height:35px;
+            padding:5px;
+            color:white;
+            /* 下边框 */
+            border-bottom: 1px solid white;
+            text-align: center;
+            /* line-height: 25px; */
+
+        }
+        .ul_two > li:hover{
+            color: rgb(255,205,160);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <ul class="ul_one">
+        <li>江西省
+            <ul class="ul_two">
+                <li>南昌市</li>
+                <li>景德镇市</li>
+                <li>萍乡市</li>
+                <li>九江市</li>
+            </ul>
+        </li>
+        <li>湖南省</li>
+        <li>广东省</li>
+    </ul>
+</body>
+</html>
