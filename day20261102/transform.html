@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform变换</title>
+    <style>
+        .dvOne{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            /* 在1秒内将所有样式属性进行改变 */
+            transition: all 1s;
+        
+        }
+        .dvOne:active{
+            background-color: blue;
+            /* 旋转 */
+            /* transform: rotate(45deg); */
+            /* 缩放 */
+            /* transform: scale(1.5,1.5); */
+            /* 移动 */
+            /* transform: translate(-100px,-100px); */
+            /* 倾斜 */
+            /* transform: skew(45deg); */
+            transform: rotate3d(0,0,1,1800deg) translate3d(40px,0,0);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="dvOne"></div>
+</body>
+</html>
