@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>动画样式</title>
+    <style>
+      div {
+        width: 220px;
+        height: 350px;
+        background-color: #ddd;
+        animation: mymove 5s infinite;
+        /* 设置样式，使得背景图片进行缩放，以适应div的大小 */
+        background-size: cover;
+      }
+      /* 动画样式 动画名称为mymove 5s infinite */
+      @keyframes mymove {
+        0% {
+          background-image: url("1.jpg");
+        }
+        25% {
+          background-image: url("2.jpg");
+        }
+        50% {
+          background-image: url("4.jpg");
+        }
+        75% {
+          background-image: url("5.jpg");
+        }
+        100% {
+          background-image: url("1.jpg");
+        }
+      }
+      @font-face {
+        font-family: myFirstFont;
+        src: url(AlimamaDaoLiTi.woff2);
+      }
+
+      div {
+        font-family: myFirstFont;
+      }
+    </style>
+  </head>
+  <body>
+    <div>《肖申克的救赎》</div>
+  </body>
+</html>
