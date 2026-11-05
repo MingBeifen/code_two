@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>作业</title>
+    <style>
+      .dv {
+        display: grid;
+        width: 600px;
+        height: 400px;
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: 50px 1fr 50px;
+        background-color: white;
+        gap: 8px;
+      }
+      div {
+        align-content: center;
+        text-align: center;
+        background-color: rgb(55, 136, 249);
+        color: white;
+        font-size: 18px;
+      }
+      div.merge {
+        grid-column: span 2;
+      }
+      div.sidebar {
+        background-color: rgb(155, 189, 251);
+      }
+      div.main {
+        background-color: rgb(179, 206, 255);
+        color: rgb(17, 17, 17);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dv">
+      <div class="merge">header</div>
+      <div class="sidebar">sidebar</div>
+      <div class="main">main</div>
+      <div class="merge">footer</div>
+    </div>
+  </body>
+</html>
