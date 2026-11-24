@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试</title>
+    <style>
+        /* 标签选择器 */
+        body {
+            background-color: #ddd;
+        }
+
+        #hh {
+            background-color: yellow;
+        }
+
+        a:link {
+            color: blue;
+        }
+
+        a:visited {
+            color: purple;
+        }
+        a:hover {
+            color: red;
+        }
+
+        a:active {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <hr id="hh" color="red" size="5" />
+    <p style="background-color: gray;">斗破苍穹</p>
+    <span style="background-color: red;">剑来</span>
+    <h1 style="background-color: blue;">陈平安</h1>
+    <b style="background-color: blue;">曹操</b>
+    <em style="background-color: blue;">刘备</em>
+
+    <a href="https://www.baidu.com">跳转到百度</a>
+
+    <dl>
+        <dt>大白菜</dt>
+        <dd>大</dd>
+        <dd>蔬菜</dd>
+        <dd>白色和绿色结合的颜色</dd>
+    </dl>
+
+    <ul type="none">
+        <li>小王</li>
+        <li>小李</li>
+        <li>小张</li>
+    </ul>
+
+    <table bgcolor="#ddd" border="1" width="500" height="20" align="center">
+        <caption>用户信息</caption>
+        <tr>
+            <td colspan="2">小王李</td>
+            <!-- <td>小李</td> -->
+            <td rowspan="2">小张</td>
+        </tr>
+        <tr>
+            <td>小罗</td>
+            <td>小欧</td>
+            <!-- <td>小美</td> -->
+
+        </tr>
+    </table>
+
+    <form action="https://www.baidu.com" method="get" enctype="application/x-www-form-urlencoded">
+        <label for="">用户名</label>
+        <input type="text" name="username" id="username" placeholder="请输入用户名" />
+        <br />
+        <label for="">密码</label>
+        <input type="password" name="password" id="password" placeholder="请输入密码" />
+        <br />
+        <input type="submit" value="登录" />
+        <input type="reset" value="重置" />
+    </form>
+
+    <textarea name="text" id="text" cols="30" rows="10">
+        默认值
+    </textarea>
+
+    <input type="reset" value="重置" />
+    <input type="button" value="重置" />
+    <button>按钮</button>
+    <input type="checkbox" name="checkbox" id="checkbox" checked="checked" />
+
+
+    <select name="select" id="select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3" selected>3</option>
+    </select>
+
+
+    <label for="user-pwd">密码：</label>
+    <input type="password" id="user-pwd" name="password">
+</body>
+
+</html>

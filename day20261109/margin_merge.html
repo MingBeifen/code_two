@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>外边距合并</title>
+    <style>
+       
+        #dvOne {
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            /* margin-bottom: 100px; */
+            /* float: left;
+            margin-right: 100px; */
+            background-color: red;
+            /* display:none; */
+            visibility: hidden;
+        }
+        #dvTwo {
+            width: 200px;
+            height: 200px;
+            border: 1px solid blue;
+            /* margin-top: 200px; */
+            /* float: left;
+            margin-left: 100px; */
+            background-color: blue;
+        }
+        span {
+            width: 200px;
+            height: 200px;
+            border: 1px solid green;
+            background-color: green;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div id="dvOne">
+        中国
+    </div>
+    <div id="dvTwo">
+        美国
+    </div>
+
+    <span>日本</span>
+    <span>韩国</span>
+    <span style="display: inline;background-color: gray;">新加坡</span>
+
+    <div style="width: 200px;height: 200px;background-color: red;position: relative;left:100px;top:100px;">朝鲜</div>
+</body>
+</html>

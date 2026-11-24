@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页面</title>
+    <style>
+        #dv {
+            width: 800px;
+            height: 500px;
+            background-color: pink;
+            /* background-image: url(https://picsum.photos/100/100);
+            background-repeat: repeat-x; */
+            word-spacing: 100px;
+            letter-spacing: 10px;
+            text-indent: 20px;
+            opacity: 0.8;
+            border-radius: 10px;
+        }
+        #dvOne {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            overflow: scroll;
+        }
+        #dvTwo {
+            width: 100px;
+            height: 100px;
+            /*文本溢出显示省略号*/
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        </style>
+</head>
+<body>
+    <div id="dv">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quibusdam.</p>
+    </div>
+
+    <div id="dvOne">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quibusdam.</div>
+    <div id="dvTwo">Lorem ipsum dolor</div>
+
+    <ul style="list-style-type: circle;">
+        <li>小王</li>
+        <li>小李</li>
+        <li>小张</li>
+    </ul>
+</body>
+</html>
