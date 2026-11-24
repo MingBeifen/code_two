@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登陆界面</title>
+
+    <style>
+      body {
+        background: linear-gradient(135deg, #f5a5b5, #a4b5f5, #a5f5c6);
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+      }
+
+      .login-box {
+        border: 1px solid #ccc;
+        text-align: center;
+        width: 300px;
+        /* height: 100px; */
+        padding: 30px;
+       
+      }
+
+      input {
+        padding: 10px;
+        width: 100%;
+        margin: 10px 0;
+         box-sizing: border-box;
+      }
+
+      button {
+        padding: 10px;
+        width: 50%;
+        margin: 10px auto 0;
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-box">
+      <h1>欢迎来到登陆界面</h1>
+      <input type="text" placeholder="请输入用户名" id="user" />
+      <input type="password" placeholder="请输入密码" id="pass" />
+      <button onclick="login()">登陆</button>
+    </div>
+  </body>
+</html>

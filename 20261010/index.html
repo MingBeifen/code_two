@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: sans-serif;
+            
+        }
+        .login-box {
+            border: 1px solid #ccc;
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-box">
+        <h3>用户登录</h3>
+        <input type="text" placeholder="用户名" id="user">
+        <input type="password" placeholder="密码" id="pass">
+        <button onclick="login()">登录</button>
+    </div>
+
+    <script>
+        function login() {
+            var u = document.getElementById('user').value;
+            var p = document.getElementById('pass').value;
+            if(u && p) {
+                alert('登录成功：' + u);
+            } else {
+                alert('请输入用户名和密码');
+            }
+        }
+    </script>
+
+</body>
+</html>
