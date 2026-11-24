@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>样式的继承</title>
+    <style>
+      .tag > span {
+        color: red;
+        font-size: 30px;
+        font-weight: bold;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tag">
+      <span>spanA
+        <span>spanA1</span>
+      </span>
+      <span>spanB</span>
+    </div>
+  </body>
+</html>
