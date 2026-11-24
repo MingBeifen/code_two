@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网格布局</title>
+    <style>
+        /* .dv {
+            display: grid;
+            width: 600px;
+            height: 400px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            border: 1px solid red;
+            gap: 20px;
+            background-color: pink;
+        } */
+        .dv {
+            display: grid;
+            width: 600px;
+            height: 400px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 100px 100px 100px;
+            border: 1px solid red;
+            gap: 10px;
+            background-color: pink;
+            justify-content: center;
+            align-content: center;
+            /* justify-items: center;
+            align-items: center; */
+        }
+
+        div {
+            background-color: aqua;
+            width: 100px;
+            height: 50px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dv">
+        <div>西施</div>
+        <div>王昭君</div>
+        <div>貂蝉</div>
+        <div>杨玉环</div>
+        <div>吕布</div>
+        <div>刘备</div>
+        <div>袁绍</div>
+        <div>曹操</div>
+        <div>赵云</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+
+    .container {
+      display: grid;
+      width: 600px;
+      height: 400px;
+      /* border: 2px solid black; */
+      grid-template-rows: 1fr 3fr 1fr;
+      grid-template-columns: 1fr 2fr;
+      gap: 20px;
+      font-weight: bold;
+      
+      
+    }
+    .container > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+    }
+    .container > div:hover {
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
+        font-size: 30px;
+
+    }
+    .header {
+      background-color: #5b84ed;
+      grid-column: 1 / -1;
+    }
+    .sidebar {
+      background-color: #b1c5f5;
+    }
+    .main {
+      background-color: #d5e1f8;
+    }
+    .footer {
+      width: auto;
+      background-color: #5b84ed;
+      grid-column: 1 / -1;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="header">header</div>
+      <div class="sidebar">sidebar</div>
+      <div class="main">main</div>
+      <div class="footer">footer</div>
+    </div>
+  </body>
+</html>
