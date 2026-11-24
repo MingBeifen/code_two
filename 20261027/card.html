@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>猜数字游戏</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 600px;
+        margin: 0 auto;
+      }
+      .container > div {
+        width: 100px;
+        height: 160px;
+        background: gray;
+        margin: 5px;
+        color: white;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+      }
+      .container > div:nth-child(1) {
+        background: red;
+      }
+      .container > div:nth-child(2) {
+        background: blue;
+      }
+      .container > div:nth-child(3) {
+        background: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <button onclick="randomOrder()">随机</button>
+    <button onclick="stopTimer()">停止</button>
+  </body>
+</html>
+<script>
+  // 1. 获取元素
+  var container = document.querySelector(".container");
+  var divs = document.querySelectorAll("div");
+  // 随机修改三个div的order值
+  var timer;
+  function randomOrder() {
+    timer = setInterval(() => {
+      for (var i = 0; i < divs.length; i++) {
+        divs[i].style.order = Math.floor(Math.random() * 3);
+      }
+    }, 100);
+  }
+  function stopTimer() {
+    clearInterval(timer);
+  }
+</script>
