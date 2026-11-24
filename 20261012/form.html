@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>from表单</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f5f5f5;
+      }
+      .container {
+        text-align: center;
+      }
+      h1 {
+        margin-bottom: 15px;
+        color: #333;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 600px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      td {
+        border: 1px solid #ddd;
+        padding: 12px 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>用户注册表</h1>
+
+      <form action="#" method="post">
+        <table>
+          <tr>
+            <td class="label">用户名</td>
+            <td colspan="3">
+              <input type="text" placeholder="请输入用户名" />
+            </td>
+          </tr>
+          <tr>
+            <td class="label">密码</td>
+            <td colspan="3">
+              <input type="password" placeholder="请输入密码" />
+            </td>
+          </tr>
+          <tr>
+            <td class="label">确认密码</td>
+            <td colspan="3">
+              <input type="password" placeholder="请确认密码" />
+            </td>
+          </tr>
+          <tr>
+            <td class="label">邮箱</td>
+            <td colspan="3"><input type="email" placeholder="请输入邮箱" /></td>
+          </tr>
+          <tr>
+            <td class="label">电话号码</td>
+            <td colspan="3">
+              <input type="tel" placeholder="请输入电话号码" />
+            </td>
+          </tr>
+
+          <tr>
+            <td class="label">性别</td>
+            <td colspan="3">
+              <label><input type="radio" name="gender" checked />男</label>
+              <label><input type="radio" name="gender" />女</label>
+            </td>
+          </tr>
+          <tr>
+            <td class="label">是否有房</td>
+            <td colspan="3">
+              <label><input type="radio" name="house" checked />有</label>
+              <label><input type="radio" name="house" />没有</label>
+            </td>
+          </tr>
+          <tr>
+            <td class="label">爱好</td>
+            <td colspan="3" class="hobbies">
+              <label
+                ><input
+                  type="checkbox"
+                  name="hobby"
+                  value="羽毛球"
+                  checked
+                />羽毛球</label
+              >
+              <label
+                ><input type="checkbox" name="hobby" value="篮球" />篮球</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="hobby"
+                  value="乒乓球"
+                />乒乓球</label
+              >
+              <label
+                ><input type="checkbox" name="hobby" value="足球" />足球</label
+              >
+              <label
+                ><input type="checkbox" name="hobby" value="网球" />网球</label
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="label">户籍</td>
+            <td colspan="3">
+              <select style="width: 60px; padding: 2px">
+                <option value="beijing" selected>北京</option>
+                <option value="jiangxi">江西</option>
+                <option value="shanghai">上海</option>
+                <option value="guangdong">广东</option>
+                <option value="wuhan">武汉</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="label">课程</td>
+            <td colspan="3" style="height: 80px; vertical-align: top">
+              <select multiple style="width: 60px; padding: 2px">
+                <option value="beijing" selected>语文</option>
+                <option value="jiangxi">数学</option>
+                <option value="shanghai">英语</option>
+                <option value="guangdong">政治</option>
+                <option value="wuhan">物理</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="label">头像</td>
+            <td colspan="3">
+              <input type="file" accept="image/*" />
+            </td>
+          </tr>
+          <tr>
+            <td class="label">个人介绍</td>
+            <td colspan="3">
+              <textarea></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td class="label">验证码</td>
+            <td colspan="3">
+              <input
+                type="text"
+                style="
+                  width: 180px;
+                  display: inline-block;
+                  vertical-align: middle;
+                "
+              />
+              <span
+                style="
+                  display: inline-block;
+                  width: 60px;
+                  height: 30px;
+                  background-color: #eee;
+                  text-align: center;
+                  line-height: 30px;
+                  border: 1px solid #ccc;
+                  vertical-align: middle;
+                  margin-left: 5px;
+                "
+                >8888</span
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="4" style="text-align: center; padding: 10px 0">
+              <label
+                ><input
+                  type="checkbox"
+                  name="agreement"
+                />是否阅读并同意协议</label
+              >
+            </td>
+          </tr>
+          <tr>
+            <td
+              colspan="4"
+              class="button-row"
+              style="text-align: center; padding: 10px 0"
+            >
+              <input type="submit" value="提交" />
+              <input type="reset" value="重置" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
